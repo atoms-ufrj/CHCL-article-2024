@@ -255,8 +255,8 @@ void DihedralCharmm2::compute(int eflag, int vflag)
       r2inv = 1.0/rsq;
       r6inv = r2inv*r2inv*r2inv;
 
-      if (implicit) forcecoul = scale[itype][jtype] * qqrd2e * q[i1]*q[i4]*r2inv;  //MODIFIQUEI
-      else forcecoul = scale[itype][jtype] * qqrd2e * q[i1]*q[i4]*sqrt(r2inv); //MODIFIQUEI
+      if (implicit) forcecoul = scale[itype][jtype] * qqrd2e * q[i1]*q[i4]*r2inv;  //MODIFIED
+      else forcecoul = scale[itype][jtype] * qqrd2e * q[i1]*q[i4]*sqrt(r2inv); //MODIFIED
       forcelj = r6inv * (lj14_1[itype][jtype]*r6inv - lj14_2[itype][jtype]);
       fpair = weight[type] * (forcelj+forcecoul)*r2inv;
 
@@ -381,7 +381,7 @@ void DihedralCharmm2::init_style()
       error->all(FLERR,"Dihedral charmm is incompatible with Pair style");
     implicit = *ptr;
     
-    scale = (double **) force->pair->extract("scale",itmp); //MODIFIQUEI
+    scale = (double **) force->pair->extract("scale",itmp); //MODIFIED
     
   }
 }
