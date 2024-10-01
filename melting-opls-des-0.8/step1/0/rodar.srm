@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#SBATCH --nodes=1                      #Numero de Nós
+#SBATCH --ntasks=24                    #Numero total de tarefas MPI
+#SBATCH -p cpu_shared                  #Fila (partition) a ser utilizada
+#SBATCH -J job1                        #Nome job
+#SBATCH --exclusive                    #Utilização exclusiva dos nós durante a execução do job
+#SBATCH --time=72:00:00		       #Altera o tempo limite para 5 minutos
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=gcorrea@peq.coppe.ufrj.br
+
+#Exibe os nós alocados para o Job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+#Comandos
+module load gcc/9.3
+module load openmpi/gnu/4.0.4
+module load cuda/11.2
+
+mpirun -n $SLURM_NTASKS /scratch/atoms/gabriela.correa/lammps-29Sep2021/src/lmp_mpi -in in.step1 &> job.out
+
+
