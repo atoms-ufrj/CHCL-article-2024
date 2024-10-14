@@ -6,4 +6,4 @@ The repository is organized into three main folders:
 
 --> Unit_Cell: contains the atomic positions of the unit cell of ChCl form beta.
 
---> Melting_OPLS_DES_0.8: contains the calculations for each step of the PSCP method (npt - relative free energy as a function of temperature; step0 - parameters of the Gaussian potential; step1 - S->DWF, step2 - DWF->WF, step3 - WF->L).
+--> Melting_OPLS_DES_0.8: contains the PSCP free energy calculations considering, as an example, the OPLS-DES force field with a charge scaling factor of 0.8. The subfolders are described as: npt - relative free energy as a function of temperature; step0 - parameters of the Gaussian potential; step1 - S->DWF, step2 - DWF->WF, step3 - WF->L.
