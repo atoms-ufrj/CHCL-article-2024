@@ -2,5 +2,8 @@ Github repository associated with the manuscript "Assessing Melting and Solid-So
 
 The repository is organized as:
 
---> LAMMPS Modification: contains a customized version of the LAMMPS "dihedral_style charmm" command, which was applied to couple and decouple Lennard-Jones interactions within the CHARMM force field.
---> Unit Cell: atomic positions of the unit cell of ChCl form \beta.
+--> LAMMPS_Modification: contains a customized version of the LAMMPS "dihedral_style charmm" command, which was applied to couple and decouple Lennard-Jones interactions within the CHARMM force field.
+
+--> Unit_Cell: atomic positions of the unit cell of ChCl form \beta.
+
+--> PSCP_Melting_OPLS_DES_0.8: 
