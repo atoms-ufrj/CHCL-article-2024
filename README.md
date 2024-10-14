@@ -6,4 +6,4 @@ The repository is organized as:
 
 --> Unit_Cell: atomic positions of the unit cell of ChCl form \beta.
 
---> PSCP_Melting_OPLS_DES_0.8: 
+--> Melting_OPLS_DES_0.8: 
